@@ -7,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
-  String apiKey = "378fd4e950bba4a2cs12734b760d69afe";
+  String apiKey = "312d51943ff5c83b924849c47c41da74";
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
             latitude: 22.550460,
             longitude: 88.347311,
             location: "Kolkata",
+            unit: "imperial",
             height: 180,
             apiKey: apiKey,
             alignment: MainAxisAlignment.center,

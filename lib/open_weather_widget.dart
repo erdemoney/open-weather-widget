@@ -11,6 +11,7 @@ class OpenWeatherWidget extends StatefulWidget {
       required this.longitude,
       required this.location,
       required this.apiKey,
+      required this.unit,
       this.height,
       this.width,
       this.padding,
@@ -53,6 +54,7 @@ class OpenWeatherWidget extends StatefulWidget {
   final TextStyle? weatherDetailsTextStyle;
   final TextStyle? temperatureTextStyle;
   final TextStyle? weekdayTextStyle;
+  final String unit;
   final TextStyle? maxTemperatureTextStyle;
   final TextStyle? minTemperatureTextStyle;
   final TextStyle? temperatureScaleTextStyle;
@@ -67,6 +69,7 @@ class _OpenWeatherWidgetState extends State<OpenWeatherWidget> {
     weatherBloc.getWeather(
       latitude: widget.latitude,
       longitude: widget.longitude,
+      unit: widget.unit,
       apiKey: widget.apiKey,
     );
   }
