@@ -123,7 +123,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                                       height: 1),
                             ),
                             Text(
-                              widget.unit == "metric" ? "°C" : "°F",
+                              widget.unit == "imperial" ? "°F" : "°C",
                               style: widget.temperatureScaleTextStyle ??
                                   TextStyle(
                                     fontSize: 15,

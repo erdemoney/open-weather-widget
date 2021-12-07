@@ -96,6 +96,7 @@ class _OpenWeatherWidgetState extends State<OpenWeatherWidget> {
       temperatureTextStyle: widget.temperatureTextStyle,
       weekdayTextStyle: widget.weekdayTextStyle,
       locationTextStyle: widget.locationTextStyle,
+      unit: widget.unit,
       maxTemperatureTextStyle: widget.maxTemperatureTextStyle,
       minTemperatureTextStyle: widget.minTemperatureTextStyle,
       weatherDetailsTextStyle: widget.weatherDetailsTextStyle,
