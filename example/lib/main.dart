@@ -7,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
-  String apiKey = "312d51943ff5c83b924849c47c41da74";
+  final String apiKey = "myApiKey";
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: OpenWeatherWidget(
-            latitude: 22.550460,
-            longitude: 88.347311,
-            location: "Kolkata",
+            latitude: 43.768333,
+            longitude: -121.633056,
+            location: "Deschutes National Forrest",
             unit: "imperial",
             height: 180,
             apiKey: apiKey,

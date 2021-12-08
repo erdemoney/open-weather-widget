@@ -75,8 +75,8 @@ class _WeatherWidgetState extends State<WeatherWidget> {
             WeatherModel? data = snapshot.data as WeatherModel;
             todayTemp = data.current.temp.toString();
             return Container(
-              height: widget.height == null || widget.height! < 180
-                  ? 180
+              height: widget.height == null || widget.height! < 182
+                  ? 182
                   : widget.height,
               width: widget.width ?? MediaQuery.of(context).size.width,
               padding: widget.padding ??
@@ -93,20 +93,22 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            widget._location,
-                            style: widget.locationTextStyle ??
-                                TextStyle(
-                                  fontSize: 23,
-                                  color:
-                                      widget.locationColor ?? Colors.grey[800],
-                                ),
-                          ),
-                          humidityAndWind(snapshot.data, index),
-                        ],
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              widget._location,
+                              style: widget.locationTextStyle ??
+                                  TextStyle(
+                                    fontSize: 23,
+                                    color: widget.locationColor ??
+                                        Colors.grey[800],
+                                  ),
+                            ),
+                            humidityAndWind(snapshot.data, index),
+                          ],
+                        ),
                       ),
                       Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
